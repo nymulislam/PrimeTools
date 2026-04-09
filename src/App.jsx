@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav'
 import Products from './components/Products/Products'
 import HowItWorks from './components/HowItWorks/HowItWorks'
 import PricingSection from './components/PricingSection/PricingSection'
+import CTASection from './components/CTASection/CTASection'
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
       <Products></Products>
       <HowItWorks></HowItWorks>
       <PricingSection></PricingSection>
+      <CTASection></CTASection>
       </div>
     </>
   )
