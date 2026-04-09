@@ -6,6 +6,7 @@ import Products from './components/Products/Products'
 import HowItWorks from './components/HowItWorks/HowItWorks'
 import PricingSection from './components/PricingSection/PricingSection'
 import CTASection from './components/CTASection/CTASection'
+import Footer from './components/Footer/Footer'
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
       <HowItWorks></HowItWorks>
       <PricingSection></PricingSection>
       <CTASection></CTASection>
+      <Footer></Footer>
       </div>
     </>
   )
