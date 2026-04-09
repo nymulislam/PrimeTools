@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero'
 import Nav from './components/Nav/Nav'
 import Products from './components/Products/Products'
 import HowItWorks from './components/HowItWorks/HowItWorks'
+import PricingSection from './components/PricingSection/PricingSection'
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
       <KeyMetrics></KeyMetrics>
       <Products></Products>
       <HowItWorks></HowItWorks>
+      <PricingSection></PricingSection>
       </div>
     </>
   )
