@@ -52,7 +52,7 @@ const Footer = () => {
             <div className='divider before:bg-white after:bg-white opacity-50 mx-10'>
 
             </div>
-            <footer className="footer bg-[#101727] px-10 pb-8 pt-2 flex justify-between">
+            <footer className="footer bg-[#101727] px-6 md:px-10 pb-8 pt-2 flex flex-col md:flex-row justify-between gap-4">
                 <aside className="grid-flow-col items-center">
                     <p>
                         © 2026 PrimeTools. All rights reserved.

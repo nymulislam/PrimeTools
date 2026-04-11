@@ -21,7 +21,7 @@ const ProductCard = ({ product, carts, setCarts }) => {
     }
 
     return (
-        <div className="card w-96 shadow-sm bg-base-100">
+        <div className="card w-full max-w-sm mx-auto shadow-sm bg-base-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition duration-300">
             <div className="card-body">
                 <div className='text-right'>
                     <span className={`badge badge-md rounded-full ${tagStyle[product.tagType]}`}>{product.tag}</span>
@@ -47,7 +47,7 @@ const ProductCard = ({ product, carts, setCarts }) => {
 
                 </ul>
                 <div className="mt-6">
-                    <button onClick={handleCart} className="btn btn-primary btn-block rounded-full">Buy Now</button>
+                    <button onClick={handleCart} className="btn btn-primary btn-block rounded-full hover:scale-105 hover:shadow-lg transition duration-300">Buy Now</button>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ const PricingSection = () => {
     return (
         <div className='space-y-20 py-20'>
             <div className='text-center'>
-                <h1 className='text-5xl font-bold mb-5'>
+                <h1 className='text-3xl md:text-5xl font-bold mb-5'>
                     Simple, Transparent Pricing
                 </h1>
                 <p>
@@ -13,10 +13,12 @@ const PricingSection = () => {
             </div>
 
             {/* Pricing Card */}
-            <div className='flex justify-center items-center gap-10'>
-                <div className="card w-96 bg-base-100 shadow-sm">
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 py-20'>
+                
+                {/* Card 01 */}
+                <div className="card w-full bg-base-100 shadow-sm hover:shadow-lg transition duration-300">
                     <div className="card-body">
-                        <div className="">
+                        <div>
                             <h2 className="text-3xl font-bold">Starter</h2>
                             <p>
                                 Perfect for getting started
@@ -49,16 +51,16 @@ const PricingSection = () => {
                 </div>
 
                 {/* Card-02 */}
-                <div className="card w-96 shadow-sm text-white bg-primary">
-                    <div className="card-body">
-                        <span className="badge badge-md rounded-full badge-warning bg-amber-100 relative -top-9 left-26">Most Popular</span>
+                <div className="card w-full bg-primary  text-white shadow-lg hover:shadow-2xl md:scale-105 border-2 border-primary hover:-translate-y-2 transition duration-300">
+                    <div className="card-body relative">
+                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 badge badge-warning bg-amber-100 text-black rounded-full">Most Popular</span>
                         <div className="">
                             <h2 className="text-3xl font-bold">Pro</h2>
                             <p>
                                 Best for professionals
                             </p>
 
-                            <span className="text-xl block my-4"><span className='text-2xl font-semibold'>$29</span>/Month</span>
+                            <span className="text-xl block my-4"><span className='text-3xl font-bold'>$29</span>/Month</span>
                         </div>
                         <ul className="flex flex-col gap-2 text-xs">
                             <li>
@@ -87,13 +89,13 @@ const PricingSection = () => {
                             </li>
                         </ul>
                         <div className="mt-6">
-                            <button className="btn btn-primary btn-soft btn-block rounded-full">Start Pro Trial</button>
+                            <button className="btn btn-primary btn-soft btn-block rounded-full hover:border-2 hover:border-white">Start Pro Trial</button>
                         </div>
                     </div>
                 </div>
 
                 {/* Card-03 */}
-                <div className="card w-96 bg-base-100 shadow-sm">
+                <div className="card w-full bg-base-100 shadow-sm hover:shadow-lg transition duration-300">
                     <div className="card-body">
                         <div className="">
                             <h2 className="text-3xl font-bold">Enterprise</h2>

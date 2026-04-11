@@ -17,35 +17,35 @@ const Cart = ({ carts, setCarts }) => {
     }
 
     return (
-        <div className='shadow-md max-w-7xl mx-auto rounded-lg'>
-            <h2 className='text-2xl font-semibold px-5 py-3'>Your Cart</h2>
+        <div className='max-w-5xl mx-auto shadow-md  rounded-lg bg-base-100 my-10'>
+            <h2 className='text-2xl font-semibold px-5 py-4 '>Your Cart</h2>
 
             {carts.length > 0 ?
 
                 /* Cart Item */
                 <div>
                     {
-                        carts.map((cart, index) => (
-                            <div key={index} className='px-5 py-2'>
-                                <div className='flex justify-between items-center p-5 shadow-sm rounded-lg'>
-                                    <div className='flex items-center gap-2.5'>
+                        carts.map((cart) => (
+                            <div key={cart.id} className='px-5 py-2'>
+                                <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 p-5 shadow-sm rounded-lg hover:shadow-md transition'>
+                                    <div className='flex items-center gap-3'>
                                         <div className='p-3 rounded-full shadow-sm'>
-                                            <img src={cart.icon} alt="Product icon" />
+                                            <img src={cart.icon} alt="Product icon" className='w-10 h-10' />
                                         </div>
                                         <div>
-                                            <h2 className='text-xl font-bold'>{cart.name}</h2>
+                                            <h2 className='text-lg font-bold'>{cart.name}</h2>
                                             <p className='opacity-60 font-semibold'>${cart.price}</p>
                                         </div>
                                     </div>
 
-                                    <button onClick={() => handleRemove(cart)} className='btn btn-error btn-soft'>Remove</button>
+                                    <button onClick={() => handleRemove(cart)} className='btn btn-error btn-sm sm:btn-md btn-soft hover:scale-105 hover:shadow-lg transition duration-300'>Remove</button>
                                 </div>
                             </div>
                         ))
                     }
 
-                    <div className='flex items-center justify-between m-5 shadow-sm p-5 rounded-xl'>
-                        <p>
+                    <div className='flex items-center justify-between m-5 p-5 shadow-sm rounded-xl '>
+                        <p className='text-lg font-medium'>
                             Total:
                         </p>
                         <h5 className='text-2xl font-bold'>
@@ -53,15 +53,16 @@ const Cart = ({ carts, setCarts }) => {
                         </h5>
                     </div>
 
-                    <div className='pb-8 pt-2 px-5 max-w-5xl mx-auto'>
-                        <button onClick={handlePayment} className='btn btn-primary btn-wide max-w-full' type="button">Proceed to Checkout</button>
+                    <div className='p-5'>
+                        <button 
+                        onClick={handlePayment} className='btn btn-primary w-full hover:scale-101 hover:shadow-lg transition duration-300' type="button">Proceed to Checkout</button>
                     </div>
                 </div>
                 :
                 /* Empty Cart */
-                <div className='flex flex-col items-center justify-center h-96 gap-2'>
-                    <FaCartShopping size={40} className='opacity-50' />
-                    <h1 className='text-md opacity-70'>Your Cart is empty</h1>
+                <div className='flex flex-col items-center justify-center h-96 gap-3 animate-pulse'>
+                    <FaCartShopping size={50} className='opacity-40' />
+                    <h1 className='text-sm opacity-60'>Your Cart is empty</h1>
                 </div>}
 
         </div>

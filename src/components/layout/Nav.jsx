@@ -4,15 +4,15 @@ const Nav = ({ carts }) => {
     const totalPrice = carts.reduce((sum, item) => sum + item.price, 0)
     return (
 
-        <div className='navbar bg-base-100 shadow-sm'>
+        <div className='navbar bg-base-100 shadow-sm px-4 lg:px-8'>
             {/* Mobile device lists */}
-            <div className="dropdown">
-                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div className="dropdown lg:hidden">
+                <div tabIndex={0} role="button" className="btn btn-ghost">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                 </div>
                 <ul
                     tabIndex="-1"
-                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-3 shadow">
                     <li><a>Products</a></li>
                     <li>
                         <a>Features</a>
@@ -24,13 +24,13 @@ const Nav = ({ carts }) => {
             </div>
 
             {/* Site logo */}
-            <div className="lg:navbar-start">
-                <a href='/' className="text-primary btn-soft text-xl font-bold px-5">PrimeTools</a>
+            <div className="flex-1 lg:flex-none">
+                <a href='/' className="text-primary text-xl font-bold">PrimeTools</a>
             </div>
 
             {/* Large device lists */}
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+            <div className="hidden lg:flex flex-1 justify-center">
+                <ul className="menu menu-horizontal px-1 gap-2">
                     <li><a>Products</a></li>
                     <li><a href="">Features</a></li>
                     <li><a>Pricing</a></li>
@@ -39,8 +39,7 @@ const Nav = ({ carts }) => {
                 </ul>
             </div>
 
-            <div className="navbar-end space-x-4">
-
+            <div className="flex items-center gap-2 lg:gap-4">
                 {/* Cart */}
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -51,7 +50,7 @@ const Nav = ({ carts }) => {
                     </div>
                     <div
                         tabIndex={0}
-                        className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+                        className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-56 shadow">
                         <div className="card-body">
                             <span className="text-lg font-bold">{carts.length} Items</span>
                             <span className="text-info">Subtotal: ${totalPrice}</span>
@@ -63,8 +62,8 @@ const Nav = ({ carts }) => {
                 </div>
 
                 {/* Login */}
-                <button className='btn rounded-full'>Login</button>
-                <button className="btn btn-primary rounded-full">Get Started</button>
+                <button className='btn btn-xs md:btn-md rounded-full'>Login</button>
+                <button className="btn btn-xs md:btn-md btn-primary rounded-full transition-all duration-200">Get Started</button>
             </div>
         </div>
     );
