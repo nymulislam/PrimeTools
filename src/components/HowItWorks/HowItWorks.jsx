@@ -16,7 +16,7 @@ const HowItWorks = () => {
                 {/* Card-1 */}
                 <div className="card bg-base-100 w-96 shadow-sm">
                     <div className='text-right p-5'>
-                        <div className='badge bg-[#8024f9] w-8 h-8 rounded-full text-white'>
+                        <div className='badge bg-primary w-8 h-8 rounded-full text-white'>
                             01
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const HowItWorks = () => {
                 {/* Card-2 */}
                 <div className="card bg-base-100 w-96 shadow-sm">
                     <div className='text-right p-5'>
-                        <div className='badge bg-[#8024f9] w-8 h-8 rounded-full text-white'>
+                        <div className='badge bg-primary w-8 h-8 rounded-full text-white'>
                             02
                         </div>
                     </div>
@@ -58,7 +58,7 @@ const HowItWorks = () => {
                 {/* Card-3 */}
                 <div className="card bg-base-100 w-96 shadow-sm">
                     <div className='text-right p-5'>
-                        <div className='badge bg-[#8024f9] w-8 h-8 rounded-full text-white'>
+                        <div className='badge bg-primary w-8 h-8 rounded-full text-white'>
                             03
                         </div>
                     </div>

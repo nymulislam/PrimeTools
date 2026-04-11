@@ -49,7 +49,7 @@ const PricingSection = () => {
                 </div>
 
                 {/* Card-02 */}
-                <div className="card w-96 shadow-sm text-white bg-purple-700">
+                <div className="card w-96 shadow-sm text-white bg-primary">
                     <div className="card-body">
                         <span className="badge badge-md rounded-full badge-warning bg-amber-100 relative -top-9 left-26">Most Popular</span>
                         <div className="">

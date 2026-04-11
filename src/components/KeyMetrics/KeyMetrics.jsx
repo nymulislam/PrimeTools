@@ -2,7 +2,7 @@ import React from 'react';
 
 const KeyMetrics = () => {
     return (
-        <div className='bg-blue-700 text-white py-14 px-20 flex justify-center gap-20'>
+        <div className='bg-indigo-700 text-white py-14 px-20 flex justify-center gap-20'>
             <div>
                 <div>
                     <h2 className='text-4xl font-bold'>

@@ -7,24 +7,26 @@ import HowItWorks from './components/HowItWorks/HowItWorks'
 import PricingSection from './components/PricingSection/PricingSection'
 import CTASection from './components/CTASection/CTASection'
 import Footer from './components/Footer/Footer'
+import { useState } from 'react'
 
 const FetchProduct = async () => {
   const res = await fetch('/Products.json')
   return res.json()
 }
+const dataPromise = FetchProduct();
 
 function App() {
+  const [carts, setCarts] = useState([])
 
-  const ProductData = FetchProduct();
 
   return (
 
     <>
       <div className='container mx-auto'>
-        <Nav></Nav>
+        <Nav carts={carts}></Nav>
         <Hero></Hero>
         <KeyMetrics></KeyMetrics>
-        <Products ProductData={ProductData}></Products>
+        <Products dataPromise={dataPromise} carts={carts} setCarts={setCarts}></Products>
         <HowItWorks></HowItWorks>
         <PricingSection></PricingSection>
         <CTASection></CTASection>

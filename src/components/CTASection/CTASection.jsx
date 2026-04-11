@@ -2,7 +2,7 @@ import React from 'react';
 
 const CTASection = () => {
     return (
-        <div className='text-center bg-purple-700 py-28 text-white space-y-6 '>
+        <div className='text-center bg-primary py-28 text-white space-y-6 '>
             <h1 className='text-5xl font-semibold'>
                 Ready to Transform Your Workflow?
             </h1>

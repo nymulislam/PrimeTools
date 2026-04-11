@@ -1,9 +1,13 @@
-import React, { Suspense} from 'react';
-import ProductCards from './ProductCards';
+import React, { use, useState } from 'react';
 import { HashLoader } from 'react-spinners';
+import Cart from './Cart';
+import Product from './Product';
 
-const Products = ({ ProductData }) => {
-    
+const Products = ({ dataPromise, carts, setCarts }) => {
+    const [activeTab, setActiveTab] = useState('products')
+
+    const products = use(dataPromise);
+
     return (
         <div className='my-10'>
             <div className='text-center p-10 space-y-5'>
@@ -15,20 +19,24 @@ const Products = ({ ProductData }) => {
                 </p>
             </div>
 
-            {/* name of each tab group should be unique */}
+            {/* Tabs */}
             <div className="tabs tabs-box max-w-fit mx-auto rounded-full mb-10">
-                <input type="radio" name="my_tabs_1" className="tab rounded-full checked:bg-primary checked:text-white  checked:shadow-md checked:shadow-indigo-500/50" aria-label="Products" defaultChecked />
-                <input type="radio" name="my_tabs_1" className="tab rounded-full checked:bg-primary checked:text-white checked:shadow-md checked:shadow-indigo-500/50" aria-label='Cart (0)' />
+                <button
+                    onClick={() => setActiveTab('products')}
+                    className={`tab rounded-full ${activeTab === 'products' ? `bg-primary text-white shadow-md shadow-indigo-500/50` : ""}`}>Products</button>
+                <button
+                    onClick={() => setActiveTab('cart')}
+                    className={`tab rounded-full ${activeTab === 'cart' ? `bg-primary text-white shadow-md shadow-indigo-500/50` : ""}`}>Cart ({carts.length})</button>
+
             </div>
 
-            {/* Products Cards */}
-            <Suspense fallback={
-                <div className='flex justify-center items-center h-64'>
-                    <HashLoader color="#25ca16" />
-                </div>
-            }>
-                <ProductCards ProductData={ProductData}></ProductCards>
-            </Suspense>
+           { activeTab === 'products' && <div className='grid grid-cols-3 gap-7 max-w-7xl mx-auto'>
+                {products.map((product, index) => (
+                    <Product key={index} product={product} carts={carts} setCarts={setCarts}></Product>
+                ))}
+            </div>}
+
+            {activeTab === 'cart' && <Cart carts={carts}></Cart>}
         </div>
     );
 };

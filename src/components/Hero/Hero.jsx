@@ -10,10 +10,10 @@ const Hero = () => {
                     className="max-w-sm rounded-lg shadow-2xl"
                 />
                 <div className='max-w-2xl space-y-2'>
-                    <div className='flex items-center gap-1.5 bg-green-100 rounded-full px-2.5 py-0.5 max-w-fit text-green-700'>
+                    <div className='flex items-center gap-1.5 bg-indigo-100 rounded-full px-2.5 py-0.5 max-w-fit text-primary'>
                         <span className="relative flex size-3">
-                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                            <span className="relative inline-flex size-3 rounded-full bg-green-500"></span>
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75"></span>
+                            <span className="relative inline-flex size-3 rounded-full bg-indigo-500"></span>
                         </span>
                         <h6>
                             New: AI-Powered Tools Available
