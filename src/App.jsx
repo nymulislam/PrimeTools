@@ -1,13 +1,13 @@
 import './App.css'
-import KeyMetrics from './components/KeyMetrics/KeyMetrics'
-import Hero from './components/Hero/Hero'
-import Nav from './components/Nav/Nav'
-import Products from './components/Products/Products'
-import HowItWorks from './components/HowItWorks/HowItWorks'
-import PricingSection from './components/PricingSection/PricingSection'
-import CTASection from './components/CTASection/CTASection'
-import Footer from './components/Footer/Footer'
+import KeyMetrics from './components/sections/KeyMetrics'
+import Hero from './components/sections/Hero'
+import Nav from './components/layout/Nav'
+import HowItWorks from './components/sections/HowItWorks'
+import PricingSection from './components/sections/PricingSection'
+import CTASection from './components/sections/CTASection'
+import Footer from './components/layout/Footer'
 import { useState } from 'react'
+import Products from './components/Products/Products'
 
 const FetchProduct = async () => {
   const res = await fetch('/Products.json')
@@ -17,7 +17,6 @@ const dataPromise = FetchProduct();
 
 function App() {
   const [carts, setCarts] = useState([])
-
 
   return (
 

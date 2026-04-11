@@ -11,7 +11,7 @@ const CTASection = () => {
             </p>
 
             <div className='space-x-3'>
-                <button className='btn text-purple-700 rounded-full'>Explore Products</button>
+                <button className='btn text-primary rounded-full'>Explore Products</button>
                 <button className='btn bg-transparent btn-soft rounded-full text-white'>Explore Products</button>
             </div>
             <ul className='flex justify-center gap-10 opacity-80'>

@@ -1,6 +1,7 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const Product = ({ product, carts, setCarts }) => {
+const ProductCard = ({ product, carts, setCarts }) => {
 
     const tagStyle = {
         popular: 'badge-warning bg-amber-100',
@@ -9,7 +10,14 @@ const Product = ({ product, carts, setCarts }) => {
     }
 
     const handleCart = () => {
+        const isFound = carts.find(item => item.id === product.id)
+
+        if (isFound) {
+            toast.error("Already in cart")
+            return
+        }
         setCarts([...carts, product])
+        toast.success("Added to cart")
     }
 
     return (
@@ -46,4 +54,4 @@ const Product = ({ product, carts, setCarts }) => {
     );
 };
 
-export default Product;
+export default ProductCard;

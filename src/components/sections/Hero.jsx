@@ -1,5 +1,6 @@
 import React from 'react';
 import banner from '/banner.png'
+import { IoPlayOutline } from 'react-icons/io5';
 
 const Hero = () => {
     return (
@@ -28,7 +29,7 @@ const Hero = () => {
                     </p>
                     <div className='space-x-2'>
                         <button className="btn btn-primary rounded-full">Explore Products</button>
-                        <button className="btn btn-primary btn-soft rounded-full">Watch Demo</button>
+                        <button className="btn btn-primary btn-soft rounded-full"><IoPlayOutline size={18} /> Watch Demo</button>
                     </div>
                 </div>
             </div>

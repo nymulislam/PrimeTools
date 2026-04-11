@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react';
 import { HashLoader } from 'react-spinners';
+import ProductCard from './ProductCard';
 import Cart from './Cart';
-import Product from './Product';
 
 const Products = ({ dataPromise, carts, setCarts }) => {
     const [activeTab, setActiveTab] = useState('products')
@@ -32,11 +32,11 @@ const Products = ({ dataPromise, carts, setCarts }) => {
 
            { activeTab === 'products' && <div className='grid grid-cols-3 gap-7 max-w-7xl mx-auto'>
                 {products.map((product, index) => (
-                    <Product key={index} product={product} carts={carts} setCarts={setCarts}></Product>
+                    <ProductCard key={index} product={product} carts={carts} setCarts={setCarts}></ProductCard>
                 ))}
             </div>}
 
-            {activeTab === 'cart' && <Cart carts={carts}></Cart>}
+            {activeTab === 'cart' && <Cart carts={carts} setCarts={setCarts}></Cart>}
         </div>
     );
 };
