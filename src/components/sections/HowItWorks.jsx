@@ -5,7 +5,7 @@ import rocket from '/rocket.png'
 
 const HowItWorks = () => {
     return (
-        <div className='bg-gray-50 py-20 space-y-16'>
+        <div id='features' className='bg-gray-50 py-20 space-y-16'>
             <div className='text-center space-y-5'>
                 <h1 className='text-3xl md:text-5xl font-bold'>Get Started In 3 Steps</h1>
                 <p className='px-10 md:px-0'>Start using Premium digital tools in minutes, not hours.</p>

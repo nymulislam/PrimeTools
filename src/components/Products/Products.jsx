@@ -9,7 +9,7 @@ const Products = ({ dataPromise, carts, setCarts }) => {
     const products = use(dataPromise);
 
     return (
-        <div className='my-10'>
+        <div id='products' className='my-10'>
             <div className='text-center p-10 space-y-5'>
                 <h1 className='text-4xl md:text-5xl font-bold '>
                     Premium Digital Tools

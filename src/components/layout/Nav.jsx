@@ -13,13 +13,13 @@ const Nav = ({ carts }) => {
                 <ul
                     tabIndex="-1"
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-3 shadow">
-                    <li><a>Products</a></li>
+                    <li><a href='#products'>Products</a></li>
                     <li>
-                        <a>Features</a>
+                        <a href='#features'>Features</a>
                     </li>
-                    <li><a>Pricing</a></li>
-                    <li><a>Testimonials</a></li>
-                    <li><a>FAQ</a></li>
+                    <li><a href='#pricing'>Pricing</a></li>
+                    <li><a href='#testimonials'>Testimonials</a></li>
+                    <li><a href='#faq'>FAQ</a></li>
                 </ul>
             </div>
 
@@ -31,11 +31,11 @@ const Nav = ({ carts }) => {
             {/* Large device lists */}
             <div className="hidden lg:flex flex-1 justify-center">
                 <ul className="menu menu-horizontal px-1 gap-2">
-                    <li><a>Products</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a>Pricing</a></li>
-                    <li><a>Testimonials</a></li>
-                    <li><a>FAQ</a></li>
+                    <li><a href='#products'>Products</a></li>
+                    <li><a href='#features'>Features</a></li>
+                    <li><a href='#pricing'>Pricing</a></li>
+                    <li><a href='#testimonials'>Testimonials</a></li>
+                    <li><a href='#faq'>FAQ</a></li>
                 </ul>
             </div>
 
@@ -54,8 +54,11 @@ const Nav = ({ carts }) => {
                         <div className="card-body">
                             <span className="text-lg font-bold">{carts.length} Items</span>
                             <span className="text-info">Subtotal: ${totalPrice}</span>
+
                             <div className="card-actions">
-                                <button className="btn btn-primary btn-block">View cart</button>
+                                <a href="#cart" className='w-full'>
+                                    <button onClick={(e) => e.currentTarget.blur()} className="btn btn-primary btn-block ">View cart</button>
+                                </a>
                             </div>
                         </div>
                     </div>

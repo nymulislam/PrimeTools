@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className='bg-[#101727] text-white'>
+        <div id='faq' className='bg-[#101727] text-white'>
             <footer className="footer sm:footer-horizontal p-10">
                 <aside>
                     <h1 className='text-2xl font-bold'>

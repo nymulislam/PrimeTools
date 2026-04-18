@@ -17,7 +17,7 @@ const Cart = ({ carts, setCarts }) => {
     }
 
     return (
-        <div className='max-w-5xl mx-auto shadow-md  rounded-lg bg-base-100 my-10'>
+        <div id='cart' className='max-w-5xl mx-auto shadow-md  rounded-lg bg-base-100 my-10'>
             <h2 className='text-2xl font-semibold px-5 py-4 '>Your Cart</h2>
 
             {carts.length > 0 ?
